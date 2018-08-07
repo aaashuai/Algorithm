@@ -20,6 +20,30 @@ if binary_search(15, alist, 0, n):
 else:
 	print('no')
 
+
+'''
+'''
+review:                              
+import sys                                    
+def binary_search(arr, num):
+    n = len(arr)
+    if n < 1:
+        return False
+    mid = n // 2
+    if arr[mid] == num:
+        return True
+    elif arr[mid] < num:
+        return binary_search(arr[mid+1:], num)
+    else:
+        return binary_search(arr[:mid], num)
+	
+arr = [i for i in range(3, 10, 2)]
+num = int(sys.argv[1])
+print(arr, num)
+if binary_search(arr, num):
+    print("yes")
+else:
+    print("NO")
 '''
 # 非递归版本
 
