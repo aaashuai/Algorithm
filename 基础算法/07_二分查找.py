@@ -1,7 +1,7 @@
 '''
 # 递归版本 
 def binary_search(num, alist，left, right):
-	if beg >= end:
+	if left >= right:
 		return False
 
 	mid = (left+right) // 2
